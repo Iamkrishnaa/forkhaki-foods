@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'widgets/crousel_widget.dart';
 
-void main(){
+void main() {
   runApp(new MaterialApp(
     debugShowCheckedModeBanner: false,
     home: ForkhakiFoods(),
@@ -20,9 +21,8 @@ class _ForkhakiFoodsState extends State<ForkhakiFoods> {
         title: new Text("Forkhaki Foods"),
         backgroundColor: Colors.red,
       ),
-      drawer: new Drawer(
-        
-      ),
+      drawer: new Drawer(),
+      body: Container(),
     );
   }
 }
