@@ -15,7 +15,20 @@ class ForkhakiFoods extends StatelessWidget {
         title: new Text("Forkhaki Foods"),
         backgroundColor: Colors.red,
       ),
-      drawer: new Drawer(),
+      drawer: new Drawer(
+        child: ListView(
+          children: <Widget>[
+            UserAccountsDrawerHeader(
+              accountEmail: new Text('test@test.com'),
+              accountName: new Text('Test Name'),
+            ),
+            ListTile(
+              title: new Text("Home"),
+              trailing: Icon(Icons.home),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
