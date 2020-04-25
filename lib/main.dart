@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'widgets/crousel_widget.dart';
 
 void main() {
   runApp(new MaterialApp(
@@ -8,12 +7,7 @@ void main() {
   ));
 }
 
-class ForkhakiFoods extends StatefulWidget {
-  @override
-  _ForkhakiFoodsState createState() => _ForkhakiFoodsState();
-}
-
-class _ForkhakiFoodsState extends State<ForkhakiFoods> {
+class ForkhakiFoods extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +16,6 @@ class _ForkhakiFoodsState extends State<ForkhakiFoods> {
         backgroundColor: Colors.red,
       ),
       drawer: new Drawer(),
-      body: Container(),
     );
   }
 }
