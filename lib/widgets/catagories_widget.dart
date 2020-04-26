@@ -103,7 +103,7 @@ class _FoodCategoriesState extends State<FoodCategories> {
                           backgroundColor: Colors.grey[300],
                           radius: 50,
                           child: Image.network(
-                            'https://vectorified.com/download-image#food-icon-transparent-33.jpg',
+                            'https://image.flaticon.com/icons/png/512/27/27211.png',
                             width: 70,
                           ),
                         ),
