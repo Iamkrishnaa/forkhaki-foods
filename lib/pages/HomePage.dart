@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:forkhakifoods/widgets/catagories_widget.dart';
 import 'package:forkhakifoods/widgets/crousel_widget.dart';
 import 'package:forkhakifoods/widgets/flash_sell_widget.dart';
+import 'package:forkhakifoods/widgets/floating_action_widget.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -9,7 +10,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int counter = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -111,55 +111,7 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
         ),
-        floatingActionButton: SizedBox(
-          width: 70,
-          height: 70,
-          child: FloatingActionButton(
-            backgroundColor: Colors.red,
-            child: Stack(
-              children: <Widget>[
-                Center(
-                  child: new IconButton(
-                      icon: Icon(
-                        Icons.shopping_cart,
-                        size: 30,
-                      ),
-                      onPressed: () {
-                        setState(() {
-                          counter = 0;
-                        });
-                      }),
-                ),
-                counter != 0
-                    ? new Positioned(
-                        right: 10,
-                        top: 13,
-                        child: new Container(
-                          padding: EdgeInsets.all(2),
-                          decoration: new BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          constraints: BoxConstraints(
-                            minWidth: 20,
-                            minHeight: 20,
-                          ),
-                          child: Text(
-                            '$counter',
-                            style: TextStyle(
-                              color: Colors.red,
-                              fontSize: 15,
-                            ),
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
-                      )
-                    : new Container(),
-              ],
-            ),
-            onPressed: () {},
-          ),
-        ));
+        floatingActionButton: FloatingWidget());
   }
 }
 

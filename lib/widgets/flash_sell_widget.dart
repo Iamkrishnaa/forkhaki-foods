@@ -53,62 +53,97 @@ class _FlashSellState extends State<FlashSell> {
                 children: <Widget>[
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Column(
-                      children: <Widget>[
-                        CircleAvatar(
-                          backgroundColor: Colors.grey,
-                          radius: 50,
-                        ),
-                        Text("Resturants"),
-                      ],
+                    child: Card(
+                      child: Column(
+                        children: <Widget>[
+                          Container(
+                            color: Colors.grey[400],
+                            height: 150,
+                            width: 150,
+                            child: Image.network(
+                              'https://i.ytimg.com/vi/7tdUCk9pLPw/maxresdefault.jpg',
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                          Container(),
+                        ],
+                      ),
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Column(
-                      children: <Widget>[
-                        CircleAvatar(
-                          backgroundColor: Colors.grey,
-                          radius: 50,
-                        ),
-                        Text("Liquors"),
-                      ],
+                    child: Card(
+                      child: Column(
+                        children: <Widget>[
+                          Container(
+                            color: Colors.grey[400],
+                            height: 150,
+                            width: 150,
+                            child: Image.network(
+                              'https://wallpaperaccess.com/full/866656.jpg',
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                          Container(),
+                        ],
+                      ),
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Column(
-                      children: <Widget>[
-                        CircleAvatar(
-                          backgroundColor: Colors.grey,
-                          radius: 50,
-                        ),
-                        Text("Bakeries"),
-                      ],
+                    child: Card(
+                      child: Column(
+                        children: <Widget>[
+                          Container(
+                            color: Colors.grey[400],
+                            height: 150,
+                            width: 150,
+                            child: Image.network(
+                              'https://i.ytimg.com/vi/7tdUCk9pLPw/maxresdefault.jpg',
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                          Container(),
+                        ],
+                      ),
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Column(
-                      children: <Widget>[
-                        CircleAvatar(
-                          backgroundColor: Colors.grey,
-                          radius: 50,
-                        ),
-                        Text("Organic"),
-                      ],
+                    child: Card(
+                      child: Column(
+                        children: <Widget>[
+                          Container(
+                            color: Colors.grey[400],
+                            height: 150,
+                            width: 150,
+                            child: Image.network(
+                              'https://wallpaperaccess.com/full/866656.jpg',
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                          Container(),
+                        ],
+                      ),
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Column(
-                      children: <Widget>[
-                        CircleAvatar(
-                          backgroundColor: Colors.grey,
-                          radius: 50,
-                        ),
-                        Text("Refreshment"),
-                      ],
+                    child: Card(
+                      child: Column(
+                        children: <Widget>[
+                          Container(
+                            color: Colors.grey[400],
+                            height: 150,
+                            width: 150,
+                            child: Image.network(
+                              'https://i.ytimg.com/vi/7tdUCk9pLPw/maxresdefault.jpg',
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                          Container(),
+                        ],
+                      ),
                     ),
                   ),
                 ],

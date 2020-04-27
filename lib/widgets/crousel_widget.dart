@@ -48,7 +48,7 @@ class _CarouselWidgetState extends State<CarouselWidget> {
                       margin: EdgeInsets.symmetric(horizontal: 10.0),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                        color: Colors.grey[700],
+                        color: Colors.grey[600],
                       ),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(10),
