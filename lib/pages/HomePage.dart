@@ -66,6 +66,9 @@ class _HomePageState extends State<HomePage> {
               ListTile(
                 title: new Text("Profile"),
                 trailing: Icon(Icons.person),
+                onTap: () {
+                  setState(() {});
+                },
               ),
               ListTile(
                 title: new Text("Delivery Address"),

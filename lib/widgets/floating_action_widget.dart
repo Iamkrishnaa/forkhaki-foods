@@ -1,62 +1,64 @@
 import 'package:flutter/material.dart';
 
 class FloatingWidget extends StatefulWidget {
+  static int count = 0;
   @override
   _FloatingWidgetState createState() => _FloatingWidgetState();
 }
 
 class _FloatingWidgetState extends State<FloatingWidget> {
-  static int counter = 0;
+  int counter = 0;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 70,
-      height: 70,
-      child: FloatingActionButton(
-        backgroundColor: Colors.red,
-        child: Stack(
-          children: <Widget>[
-            Center(
-              child: new IconButton(
-                  icon: Icon(
-                    Icons.shopping_cart,
-                    size: 30,
-                  ),
-                  onPressed: () {
-                    setState(() {
-                      counter = 0;
-                    });
-                  }),
-            ),
-            counter != 0
-                ? new Positioned(
-                    right: 10,
-                    top: 13,
-                    child: new Container(
-                      padding: EdgeInsets.all(2),
-                      decoration: new BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      constraints: BoxConstraints(
-                        minWidth: 20,
-                        minHeight: 20,
-                      ),
-                      child: Text(
-                        '$counter',
-                        style: TextStyle(
-                          color: Colors.red,
-                          fontSize: 15,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
+      width: 80,
+      height: 80,
+      child: Stack(
+        children: <Widget>[
+          Container(
+            height: 100,
+            width: 100,
+            child: new FloatingActionButton(
+                splashColor: Colors.blueGrey,
+                backgroundColor: Colors.red,
+                child: Icon(
+                  Icons.shopping_cart,
+                  size: 40,
+                ),
+                onPressed: () {
+                  setState(() {
+                    FloatingWidget.count++;
+                  });
+                }),
+          ),
+          counter != 0
+              ? new Positioned(
+                  right: 13,
+                  top: 13,
+                  child: new Container(
+                    padding: EdgeInsets.all(2),
+                    decoration: new BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10),
                     ),
-                  )
-                : new Container(),
-          ],
-        ),
-        onPressed: () {},
+                    constraints: BoxConstraints(
+                      minWidth: 20,
+                      minHeight: 20,
+                    ),
+                    child: Text(
+                      '$counter',
+                      style: TextStyle(
+                        color: Colors.red,
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                )
+              : new Container(),
+        ],
       ),
     );
   }
