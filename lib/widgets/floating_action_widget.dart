@@ -12,8 +12,8 @@ class _FloatingWidgetState extends State<FloatingWidget> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 80,
-      height: 80,
+      width: 70,
+      height: 70,
       child: Stack(
         children: <Widget>[
           Container(
@@ -24,7 +24,7 @@ class _FloatingWidgetState extends State<FloatingWidget> {
                 backgroundColor: Colors.red,
                 child: Icon(
                   Icons.shopping_cart,
-                  size: 40,
+                  size: 35,
                 ),
                 onPressed: () {
                   setState(() {
@@ -35,7 +35,7 @@ class _FloatingWidgetState extends State<FloatingWidget> {
           counter != 0
               ? new Positioned(
                   right: 13,
-                  top: 13,
+                  top: 10,
                   child: new Container(
                     padding: EdgeInsets.all(2),
                     decoration: new BoxDecoration(
@@ -50,7 +50,7 @@ class _FloatingWidgetState extends State<FloatingWidget> {
                       '$counter',
                       style: TextStyle(
                         color: Colors.red,
-                        fontSize: 15,
+                        fontSize: 14,
                         fontWeight: FontWeight.bold,
                       ),
                       textAlign: TextAlign.center,
