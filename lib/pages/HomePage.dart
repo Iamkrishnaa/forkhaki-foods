@@ -124,7 +124,9 @@ class FoodSearch extends SearchDelegate<String> {
     "momo",
     "chowmin",
     "Burger",
-    "burger"
+    "burger",
+    "Sausage",
+    "sausages"
   ];
   final recentFood = ["Pizza", "burger"];
   @override
