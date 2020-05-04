@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 
 class FloatingWidget extends StatefulWidget {
-  static int count = 0;
   @override
   _FloatingWidgetState createState() => _FloatingWidgetState();
 }
 
 class _FloatingWidgetState extends State<FloatingWidget> {
-  int counter = 0;
+  static int counter = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +27,7 @@ class _FloatingWidgetState extends State<FloatingWidget> {
                 ),
                 onPressed: () {
                   setState(() {
-                    FloatingWidget.count++;
+                    counter++;
                   });
                 }),
           ),

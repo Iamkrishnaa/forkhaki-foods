@@ -64,12 +64,9 @@ class _HomePageState extends State<HomePage> {
                 },
               ),
               ListTile(
-                title: new Text("Profile"),
-                trailing: Icon(Icons.person),
-                onTap: () {
-                  setState(() {});
-                },
-              ),
+                  title: new Text("Profile"),
+                  trailing: Icon(Icons.person),
+                  onTap: () {}),
               ListTile(
                 title: new Text("Delivery Address"),
                 trailing: Icon(Icons.location_on),
@@ -119,8 +116,17 @@ class _HomePageState extends State<HomePage> {
 }
 
 class FoodSearch extends SearchDelegate<String> {
-  final foods = ["Pizza", "MoMo", "Chowmin"];
-  final recentFood = ["Pizza"];
+  final foods = [
+    "Pizza",
+    "MoMo",
+    "Chowmin",
+    "pizza",
+    "momo",
+    "chowmin",
+    "Burger",
+    "burger"
+  ];
+  final recentFood = ["Pizza", "burger"];
   @override
   List<Widget> buildActions(BuildContext context) {
     // actions for app bar
