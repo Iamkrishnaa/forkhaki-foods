@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class FloatingWidget extends StatefulWidget {
+  const FloatingWidget({Key? key}) : super(key: key);
+
   @override
   _FloatingWidgetState createState() => _FloatingWidgetState();
 }
@@ -15,13 +17,13 @@ class _FloatingWidgetState extends State<FloatingWidget> {
       height: 70,
       child: Stack(
         children: <Widget>[
-          Container(
+          SizedBox(
             height: 100,
             width: 100,
-            child: new FloatingActionButton(
+            child:  FloatingActionButton(
                 splashColor: Colors.blueGrey,
                 backgroundColor: Colors.red,
-                child: Icon(
+                child:  const Icon(
                   Icons.shopping_cart,
                   size: 35,
                 ),
@@ -32,22 +34,22 @@ class _FloatingWidgetState extends State<FloatingWidget> {
                 }),
           ),
           counter != 0
-              ? new Positioned(
+              ?  Positioned(
                   right: 13,
                   top: 10,
-                  child: new Container(
-                    padding: EdgeInsets.all(2),
-                    decoration: new BoxDecoration(
+                  child:  Container(
+                    padding: const EdgeInsets.all(2),
+                    decoration:  BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    constraints: BoxConstraints(
+                    constraints:  const BoxConstraints(
                       minWidth: 20,
                       minHeight: 20,
                     ),
                     child: Text(
                       '$counter',
-                      style: TextStyle(
+                      style:  const TextStyle(
                         color: Colors.red,
                         fontSize: 14,
                         fontWeight: FontWeight.bold,
@@ -56,7 +58,7 @@ class _FloatingWidgetState extends State<FloatingWidget> {
                     ),
                   ),
                 )
-              : new Container(),
+              :  const  SizedBox(),
         ],
       ),
     );
