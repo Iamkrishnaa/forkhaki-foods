@@ -4,6 +4,7 @@ import 'package:forkhakifoods/widgets/crousel_widget.dart';
 import 'package:forkhakifoods/widgets/flash_sell_widget.dart';
 import 'package:forkhakifoods/widgets/floating_action_widget.dart';
 
+/// home page 
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
@@ -14,8 +15,8 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.grey[400],
-        appBar: new AppBar(
-          title: new Text("Forkhaki Foods"),
+        appBar:  AppBar(
+          title:  Text("Forkhaki Foods"),
           backgroundColor: Colors.red,
           actions: <Widget>[
             IconButton(
@@ -115,7 +116,7 @@ class _HomePageState extends State<HomePage> {
   }
 }
 
-class FoodSearch extends SearchDelegate<String> {
+class FoodSearch extends SearchDelegate<String?> {
   final foods = [
     "Pizza",
     "MoMo",
