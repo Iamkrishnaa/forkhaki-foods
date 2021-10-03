@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:forkhakifoods/widgets/floating_action_widget.dart';
 
 class FlashSell extends StatefulWidget {
   @override

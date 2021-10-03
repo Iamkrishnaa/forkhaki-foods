@@ -7,7 +7,7 @@ class CarouselWidget extends StatefulWidget {
 }
 
 class _CarouselWidgetState extends State<CarouselWidget> {
-  CarouselSlider carouselSlider;
+  CarouselSlider? carouselSlider;
   int _current = 0;
   List imgList = [
     'https://i.ytimg.com/vi/7tdUCk9pLPw/maxresdefault.jpg',
@@ -25,21 +25,18 @@ class _CarouselWidgetState extends State<CarouselWidget> {
           ),
           Container(
             child: CarouselSlider(
-              height: 250.0,
-              initialPage: 0,
-              enlargeCenterPage: true,
-              autoPlay: true,
-              reverse: false,
-              enableInfiniteScroll: true,
-              autoPlayInterval: Duration(seconds: 5),
-              autoPlayAnimationDuration: Duration(milliseconds: 2000),
-              pauseAutoPlayOnTouch: Duration(seconds: 5),
-              scrollDirection: Axis.horizontal,
-              onPageChanged: (index) {
-                setState(() {
-                  _current = index;
-                });
-              },
+              options: CarouselOptions(
+                height: 250.0,
+                initialPage: 0,
+                enlargeCenterPage: true,
+                autoPlay: true,
+                reverse: false,
+                enableInfiniteScroll: true,
+                autoPlayInterval: Duration(seconds: 5),
+                autoPlayAnimationDuration: Duration(milliseconds: 2000),
+                pauseAutoPlayOnTouch: true,
+                scrollDirection: Axis.horizontal,
+              ),
               items: imgList.map((imgUrl) {
                 return Builder(
                   builder: (BuildContext context) {
