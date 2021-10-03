@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
 
-class FlashSell extends StatefulWidget {
+class FlashSale extends StatefulWidget {
+  const FlashSale({Key? key}) : super(key: key);
+
   @override
-  _FlashSellState createState() => _FlashSellState();
+  _FlashSaleState createState() => _FlashSaleState();
 }
 
-class _FlashSellState extends State<FlashSell> {
+class _FlashSaleState extends State<FlashSale> {
   @override
   Widget build(BuildContext context) {
     return Column(children: <Widget>[
       Card(
-        margin: EdgeInsets.all(0),
+        margin: const EdgeInsets.all(0),
         color: Colors.white,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -19,10 +21,10 @@ class _FlashSellState extends State<FlashSell> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: new Text(
-                    "Flash Sell",
+                const Padding(
+                  padding:  EdgeInsets.all(8.0),
+                  child:  Text(
+                    "Flash Sale",
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: 20.0,
@@ -33,9 +35,9 @@ class _FlashSellState extends State<FlashSell> {
                   onTap: () {
                     setState(() {});
                   },
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: new Text(
+                  child: const Padding(
+                    padding:  EdgeInsets.all(8.0),
+                    child:  Text(
                       "View All",
                       style: TextStyle(
                         color: Colors.red,
@@ -46,7 +48,7 @@ class _FlashSellState extends State<FlashSell> {
                 ),
               ],
             ),
-            Container(
+            SizedBox(
               height: 200,
               child: ListView(
                 scrollDirection: Axis.horizontal,

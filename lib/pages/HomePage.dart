@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:forkhakifoods/widgets/catagories_widget.dart';
+import 'package:forkhakifoods/widgets/categories_widget.dart';
 import 'package:forkhakifoods/widgets/crousel_widget.dart';
-import 'package:forkhakifoods/widgets/flash_sell_widget.dart';
+import 'package:forkhakifoods/widgets/flash_sale_widget.dart';
 import 'package:forkhakifoods/widgets/floating_action_widget.dart';
 
 /// home page 
@@ -30,13 +30,13 @@ class _HomePageState extends State<HomePage> {
             ),
           ],
         ),
-        drawer: new Drawer(
+        drawer:  Drawer(
           child: ListView(
             children: <Widget>[
               UserAccountsDrawerHeader(
-                accountEmail: new Text('test@test.com'),
-                accountName: new Text('Test Name'),
-                decoration: new BoxDecoration(
+                accountEmail:  Text('test@test.com'),
+                accountName:  Text('Test Name'),
+                decoration:  BoxDecoration(
                   color: Colors.red,
                   borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(10),
@@ -52,24 +52,24 @@ class _HomePageState extends State<HomePage> {
 //                  ),
 //                ],
                 ),
-                currentAccountPicture: new CircleAvatar(
+                currentAccountPicture:  CircleAvatar(
                   backgroundColor: Colors.deepPurple,
-                  child: new Text("T"),
+                  child:  Text("T"),
                 ),
               ),
               ListTile(
-                title: new Text("Home"),
+                title:  Text("Home"),
                 trailing: Icon(Icons.home),
                 onTap: () {
                   Navigator.pop(context);
                 },
               ),
               ListTile(
-                  title: new Text("Profile"),
+                  title:  Text("Profile"),
                   trailing: Icon(Icons.person),
                   onTap: () {}),
               ListTile(
-                title: new Text("Delivery Address"),
+                title:  Text("Delivery Address"),
                 trailing: Icon(Icons.location_on),
               ),
               Divider(
@@ -77,27 +77,27 @@ class _HomePageState extends State<HomePage> {
               ),
               ExpansionTile(
                 trailing: Icon(Icons.local_offer),
-                title: new Text("Offers & Promotions"),
-                children: <Widget>[
+                title:  Text("Offers & Promotions"),
+                children: const <Widget>[
                   ListTile(
-                    title: new Text("Refer Offer"),
+                    title:  Text("Refer Offer"),
                     trailing: Icon(Icons.attach_money),
                   ),
                 ],
               ),
               ListTile(
-                title: new Text("My Orders"),
+                title:  Text("My Orders"),
                 trailing: Icon(Icons.shopping_cart),
               ),
               ListTile(
-                title: new Text("WishList"),
+                title:  Text("WishList"),
                 trailing: Icon(Icons.shopping_basket),
               ),
               Divider(
                 color: Colors.blueGrey,
               ),
               ListTile(
-                title: new Text("Log Out"),
+                title:  Text("Log Out"),
                 trailing: Icon(Icons.power_settings_new),
               ),
             ],
@@ -108,7 +108,7 @@ class _HomePageState extends State<HomePage> {
             children: <Widget>[
               CarouselWidget(),
               FoodCategories(),
-              FlashSell(),
+              FlashSale(),
             ],
           ),
         ),

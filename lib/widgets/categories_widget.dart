@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class FoodCategories extends StatefulWidget {
+  const FoodCategories({Key? key}) : super(key: key);
+
   @override
   _FoodCategoriesState createState() => _FoodCategoriesState();
 }
@@ -10,15 +12,15 @@ class _FoodCategoriesState extends State<FoodCategories> {
   Widget build(BuildContext context) {
     return Column(children: <Widget>[
       Card(
-        margin: EdgeInsets.all(0),
+        margin: const EdgeInsets.all(0),
         color: Colors.white,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: new Text(
+            const Padding(
+              padding:  EdgeInsets.all(8.0),
+              child:  Text(
                 "Catagories",
                 style: TextStyle(
                   color: Colors.black,
@@ -26,7 +28,7 @@ class _FoodCategoriesState extends State<FoodCategories> {
                 ),
               ),
             ),
-            Container(
+            SizedBox(
               height: 150,
               child: ListView(
                 scrollDirection: Axis.horizontal,
@@ -43,7 +45,7 @@ class _FoodCategoriesState extends State<FoodCategories> {
                             width: 70,
                           ),
                         ),
-                        Text("Resturants"),
+                        const Text("Resturants"),
                       ],
                     ),
                   ),
@@ -59,7 +61,7 @@ class _FoodCategoriesState extends State<FoodCategories> {
                             width: 70,
                           ),
                         ),
-                        Text("Liquors"),
+                        const Text("Liquors"),
                       ],
                     ),
                   ),
@@ -75,7 +77,7 @@ class _FoodCategoriesState extends State<FoodCategories> {
                             width: 70,
                           ),
                         ),
-                        Text("Bakeries"),
+                        const Text("Bakeries"),
                       ],
                     ),
                   ),
@@ -91,7 +93,7 @@ class _FoodCategoriesState extends State<FoodCategories> {
                             width: 70,
                           ),
                         ),
-                        Text("Organic"),
+                        const Text("Organic"),
                       ],
                     ),
                   ),
@@ -107,7 +109,7 @@ class _FoodCategoriesState extends State<FoodCategories> {
                             width: 70,
                           ),
                         ),
-                        Text("Refreshment"),
+                        const Text("Refreshment"),
                       ],
                     ),
                   ),
@@ -117,7 +119,7 @@ class _FoodCategoriesState extends State<FoodCategories> {
           ],
         ),
       ),
-      SizedBox(
+      const SizedBox(
         height: 5,
       ),
     ]);
