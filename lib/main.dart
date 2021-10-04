@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:forkhakifoods/pages/homepage.dart';
+import 'package:forkhakifoods/pages/HomePage.dart';
 
 /// starting point of the app
 void main() {
