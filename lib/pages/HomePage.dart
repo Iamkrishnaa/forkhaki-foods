@@ -4,7 +4,7 @@ import 'package:forkhakifoods/widgets/crousel_widget.dart';
 import 'package:forkhakifoods/widgets/flash_sale_widget.dart';
 import 'package:forkhakifoods/widgets/floating_action_widget.dart';
 
-/// home page 
+/// home page
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
@@ -14,9 +14,8 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.grey[400],
-        appBar:  AppBar(
-          title:  Text("Forkhaki Foods"),
+        appBar: AppBar(
+          title: const Text("Forkhaki Foods"),
           backgroundColor: Colors.red,
           actions: <Widget>[
             IconButton(
@@ -30,13 +29,13 @@ class _HomePageState extends State<HomePage> {
             ),
           ],
         ),
-        drawer:  Drawer(
+        drawer: Drawer(
           child: ListView(
             children: <Widget>[
               UserAccountsDrawerHeader(
-                accountEmail:  Text('test@test.com'),
-                accountName:  Text('Test Name'),
-                decoration:  BoxDecoration(
+                accountEmail: Text('test@test.com'),
+                accountName: Text('Test Name'),
+                decoration: BoxDecoration(
                   color: Colors.red,
                   borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(10),
@@ -52,24 +51,24 @@ class _HomePageState extends State<HomePage> {
 //                  ),
 //                ],
                 ),
-                currentAccountPicture:  CircleAvatar(
+                currentAccountPicture: CircleAvatar(
                   backgroundColor: Colors.deepPurple,
-                  child:  Text("T"),
+                  child: Text("T"),
                 ),
               ),
               ListTile(
-                title:  Text("Home"),
+                title: Text("Home"),
                 trailing: Icon(Icons.home),
                 onTap: () {
                   Navigator.pop(context);
                 },
               ),
               ListTile(
-                  title:  Text("Profile"),
+                  title: Text("Profile"),
                   trailing: Icon(Icons.person),
                   onTap: () {}),
               ListTile(
-                title:  Text("Delivery Address"),
+                title: Text("Delivery Address"),
                 trailing: Icon(Icons.location_on),
               ),
               Divider(
@@ -77,27 +76,27 @@ class _HomePageState extends State<HomePage> {
               ),
               ExpansionTile(
                 trailing: Icon(Icons.local_offer),
-                title:  Text("Offers & Promotions"),
+                title: Text("Offers & Promotions"),
                 children: const <Widget>[
                   ListTile(
-                    title:  Text("Refer Offer"),
+                    title: Text("Refer Offer"),
                     trailing: Icon(Icons.attach_money),
                   ),
                 ],
               ),
               ListTile(
-                title:  Text("My Orders"),
+                title: Text("My Orders"),
                 trailing: Icon(Icons.shopping_cart),
               ),
               ListTile(
-                title:  Text("WishList"),
+                title: Text("WishList"),
                 trailing: Icon(Icons.shopping_basket),
               ),
               Divider(
                 color: Colors.blueGrey,
               ),
               ListTile(
-                title:  Text("Log Out"),
+                title: Text("Log Out"),
                 trailing: Icon(Icons.power_settings_new),
               ),
             ],

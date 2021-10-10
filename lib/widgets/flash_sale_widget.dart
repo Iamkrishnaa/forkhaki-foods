@@ -12,6 +12,7 @@ class _FlashSaleState extends State<FlashSale> {
   Widget build(BuildContext context) {
     return Column(children: <Widget>[
       Card(
+        elevation: 0.0,
         margin: const EdgeInsets.all(0),
         color: Colors.white,
         child: Column(
@@ -22,8 +23,8 @@ class _FlashSaleState extends State<FlashSale> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 const Padding(
-                  padding:  EdgeInsets.all(8.0),
-                  child:  Text(
+                  padding: EdgeInsets.all(8.0),
+                  child: Text(
                     "Flash Sale",
                     style: TextStyle(
                       color: Colors.black,
@@ -36,8 +37,8 @@ class _FlashSaleState extends State<FlashSale> {
                     setState(() {});
                   },
                   child: const Padding(
-                    padding:  EdgeInsets.all(8.0),
-                    child:  Text(
+                    padding: EdgeInsets.all(8.0),
+                    child: Text(
                       "View All",
                       style: TextStyle(
                         color: Colors.red,

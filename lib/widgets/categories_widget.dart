@@ -12,6 +12,7 @@ class _FoodCategoriesState extends State<FoodCategories> {
   Widget build(BuildContext context) {
     return Column(children: <Widget>[
       Card(
+        elevation: 0.0,
         margin: const EdgeInsets.all(0),
         color: Colors.white,
         child: Column(
@@ -19,9 +20,9 @@ class _FoodCategoriesState extends State<FoodCategories> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             const Padding(
-              padding:  EdgeInsets.all(8.0),
-              child:  Text(
-                "Catagories",
+              padding: EdgeInsets.all(8.0),
+              child: Text(
+                "Categories",
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: 20.0,
@@ -45,7 +46,7 @@ class _FoodCategoriesState extends State<FoodCategories> {
                             width: 70,
                           ),
                         ),
-                        const Text("Resturants"),
+                        const Text("Restaurants"),
                       ],
                     ),
                   ),
